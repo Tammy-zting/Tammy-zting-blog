@@ -3,8 +3,6 @@ title: Git汇总学习
 date: 2020-08-05 09:56:06
 tags:
 ---
-[toc]
-
 # Git 学习
 
 ## config
@@ -75,23 +73,24 @@ tags:
 
 - 下面表示`ztt.txt`这个文件被修改过
 
-    ![](../../img/gitpic/git_status.png)
+    ![](https://github.com/Tammy-zting/Tammy-zting.github.io/blob/master/img/gitpic/git_status.png?raw=true?)
 
 ### git diff  比较修改
 
 - 顾名思义就是查看文件的对比，我们可以看出第一行增加了`add content`
 
-  ![](.\gitpic\git_diff.png)
+  ![](https://github.com/Tammy-zting/Tammy-zting.github.io/blob/master/img/gitpic/git_diff.png?raw=true)
+      
 
 - 查看完修改的内容就可以放心提交了`git commit -am "add content"`
 
-  ![](.\gitpic\git_commit.png)
+  ![](https://github.com/Tammy-zting/Tammy-zting.github.io/tree/master/img/gitpic/git_commit.png?raw=true)
 
 ## git log 查看快照
 
 - 查看快照 即每次`commit`后的内容，从下面可以看出我们做过两次提交,显示的顺序是从近到远
 
-  ![](.\gitpic\git_log.png)
+  ![](https://github.com/Tammy-zting/Tammy-zting.github.io/tree/master/img/gitpic/git_log.png?raw=true)
 
 ​	
 
@@ -101,7 +100,7 @@ tags:
 
 - 让我们再修改下文件 增加一行`add footer`,再查看下`git log`
 
-  ![](.\gitpic\git_log_reset.png)
+  ![](https://github.com/Tammy-zting/Tammy-zting.github.io/tree/master/img/gitpic/git_log_reset.png?raw=true)
 
 - 方法一 恢复到上一个版本，`~x`代表回退到上几个版本
 
@@ -109,7 +108,7 @@ tags:
   git reset --hard HEAD~1
   ```
 
-  ![](.\gitpic\git_reset.png)
+  ![](https://github.com/Tammy-zting/Tammy-zting.github.io/tree/master/img/gitpic/git_reset.png?raw=true)
 
 - 方法二 恢复到未来版本 ，只要窗口没关闭的话你可以，往上找到版本号，不用写全，会自动补全（当然也不能只写前一两位，因为Git可能会找到多个版本号，就无法确定是哪一个了。）
 
@@ -117,7 +116,7 @@ tags:
   git reset --hard 版本号xxx
   ```
 
-  ![](.\gitpic\git_reset1.png)
+  ![](https://github.com/Tammy-zting/Tammy-zting.github.io/tree/master/img/gitpic/git_reset1.png?raw=true)
 
 ### 撤销已经提交到暂存区的操作
 
@@ -129,7 +128,7 @@ tags:
 
     HEAD表示最新的版本
 
-![](.\gitpic\git_reset2.png)
+![](https://github.com/Tammy-zting/Tammy-zting.github.io/tree/master/img/gitpic/git_reset2.png?raw=true)
 
 - 第二步 恢复到修改前的文件
 
@@ -139,7 +138,7 @@ tags:
 
 - 用于查找`commit id`，它会记录你的每一次操作
 
-  ![](.\gitpic\git_reflog.png)
+  ![](https://github.com/Tammy-zting/Tammy-zting.github.io/tree/master/img/gitpic/git_reflog.png?raw=true)
 
 ## 工作区和暂存区
 
@@ -147,7 +146,7 @@ tags:
 
 - git版本库中最重要的称为`Stage`即暂存区，git会为我们自动创建第一个分支`master`,以及指向`master`的一个指针`HEAD`，我们控制版本就是移动这个指针来更新文件
 
-  ![](.\gitpic\git.png)
+  ![](https://github.com/Tammy-zting/Tammy-zting.github.io/tree/master/img/gitpic/git.png?raw=true)
 
   第一步`git add`就是把文件添加到暂存区
 
@@ -159,7 +158,7 @@ tags:
 
 - 情况二 文件已经添加到暂存区，又做了修改，撤销修改就回到添加到暂存区后的状态
 
-  ![](.\gitpic\git_checkout.png)
+  ![](https://github.com/Tammy-zting/Tammy-zting.github.io/tree/master/img/gitpic/git_checkout.png?raw=true)
 
   *注意命令中的`--`很重要，如果没有就变成了切换到另一分支的命令*
 
@@ -173,11 +172,11 @@ tags:
 
   - 情况一 删除暂存区的`test.txt`文件
 
-    ![](.\gitpic\git_rm.png)
+    ![](https://github.com/Tammy-zting/Tammy-zting.github.io/tree/master/img/gitpic/git_rm.png?raw=true)
 
   - 情况二 不小心误删的，因为暂存区还有保存着一份，故可以执行以上的命令恢复文件
 
-    ![](.\gitpic\git_checkout1.png)
+    ![](https://github.com/Tammy-zting/Tammy-zting.github.io/tree/master/img/gitpic/git_checkout1.png?raw=true)
 
   
 
@@ -193,15 +192,15 @@ tags:
       ssh-keygen -t rsa -C "youremail@example.com"
       ```
 
-      ![](.\gitpic\create_ssh.png)
+      ![](https://github.com/Tammy-zting/Tammy-zting.github.io/tree/master/img/gitpic/create_ssh.png?raw=true)
 
     - 之后就可以找到`.ssh`目录，其中`id_rsa`和`id_rsa.pub `两个文件，这两个就是SSH Key的秘钥对，`id_rsa`是私钥，不能泄露，`id_rsa.pub`是公钥，可以放心给别人
 
     - 登录Github,打开setting,选择SSH and GPG keys ,创建New SSH key
 
-      ![](.\gitpic\github_setting.png)
+      ![](https://github.com/Tammy-zting/Tammy-zting.github.io/tree/master/img/gitpic/github_setting.png?raw=true)
 
-      ![](.\gitpic\github_newsshkey.png)
+      ![](https://github.com/Tammy-zting/Tammy-zting.github.io/tree/master/img/gitpic/github_newsshkey.png?raw=true)
 
     
 
@@ -213,11 +212,11 @@ tags:
 
   - github创建一个新的Repository
 
-    ![](.\gitpic\newRepository.png)
+    ![](https://github.com/Tammy-zting/Tammy-zting.github.io/tree/master/img/gitpic/newRepository.png?raw=true)
 
   - 然后可以根据github提示来
 
-    ![](.\gitpic\remote_origin.png)
+    ![](https://github.com/Tammy-zting/Tammy-zting.github.io/tree/master/img/gitpic/remote_origin.png?raw=true)
 
     - 在本地仓库运行命令 注意地址是你自己github的
 
@@ -260,20 +259,20 @@ tags:
 
   - `master`分支是一条线，`HEAD`指向`master`，每次提交`master`分支都会向前移动一步，这样随着你不断提交`master`分支线会越来越长
 
-    ![](.\gitpic\dev1.png)
+    ![](https://github.com/Tammy-zting/Tammy-zting.github.io/tree/master/img/gitpic/dev1.png?raw=true)
     - 创建`dev`分支，指向`master`相同的提交，`HEAD`指向`dev`,从此对工作区的修改和提交都是针对`dev`分支，比如新提交，`dev`指针会往前移动一步，但是`master`不会移动
 
-      ![](.\gitpic\dev3.png)
+      ![](https://github.com/Tammy-zting/Tammy-zting.github.io/tree/master/img/gitpic/dev3.png?raw=true)
 
-      ![](.\gitpic\dev4.png)
+      ![](https://github.com/Tammy-zting/Tammy-zting.github.io/tree/master/img/gitpic/dev4.png?raw=true)
 
   - 合并`dev`到`master`，直接把`master`指向当前`dev`提交
 
-    ![](.\gitpic\dev5.png)
+    ![](https://github.com/Tammy-zting/Tammy-zting.github.io/tree/master/img/gitpic/dev5.png?raw=true)
 
   - 合并完成之后就可以把`dev`分支删除，只剩下`master`分支
 
-    ![](.\gitpic\dev6.png)
+    ![](https://github.com/Tammy-zting/Tammy-zting.github.io/tree/master/img/gitpic/dev6.png?raw=true)
 
 #### 实例
 
@@ -296,7 +295,7 @@ tags:
     git branch
     ```
 
-    ![](.\gitpic\branch.png)
+    ![](https://github.com/Tammy-zting/Tammy-zting.github.io/tree/master/img/gitpic/branch.png?raw=true)
 
   - 增加`new.txt`文件，提交到`dev`分支,切换到`master`分支看不到这个文件，这是因为这个文件提交到的是`dev`分支，现在切换到`master`分支做合并分支操作，之后可以删除`dev`分支
 
@@ -305,7 +304,7 @@ tags:
     git merge dev
     ```
 
-    ![](.\gitpic\git_merge.png)
+    ![](https://github.com/Tammy-zting/Tammy-zting.github.io/tree/master/img/gitpic/git_merge.png?raw=true)
 
 ### 解决冲突
 
@@ -323,7 +322,7 @@ tags:
 
   - 执行`git merge demo`合并分支命令，`git status`会有冲突提示
 
-    ![](.\gitpic\conflict.png)
+    ![](https://github.com/Tammy-zting/Tammy-zting.github.io/tree/master/img/gitpic/conflict.png?raw=true)
 
     *其中提示比远程仓库提前了2个提交Your branch is ahead of ‘origin/master’*
 
@@ -331,7 +330,7 @@ tags:
 
   - 查看`new.txt`文件，Git用`<<<<<<<`，`=======`，`>>>>>>>`标记出不同分支的内容，
 
-    ![](.\gitpic\conflict1.png)
+    ![](https://github.com/Tammy-zting/Tammy-zting.github.io/tree/master/img/gitpic/conflict1.png?raw=true)
 
   - 修改`new.txt`文件，解决冲突后提交即可，删除`demo`分支
   
@@ -351,7 +350,7 @@ tags:
       git stash
       ```
     
-      ![](.\gitpic\git_stash.png)
+      ![](https://github.com/Tammy-zting/Tammy-zting.github.io/tree/master/img/gitpic/git_stash.png?raw=true)
     
     - 切换到`master`,创建并切换到新分支例如`issue-101`，修复bug,切换回`master`直接合并分支
     
@@ -366,7 +365,7 @@ tags:
       git stash pop //上面两句可以用这句代替
       ```
     
-      ![](.\gitpic\git_stash_pop.png)
+      ![](https://github.com/Tammy-zting/Tammy-zting.github.io/tree/master/img/gitpic/git_stash_pop.png?raw=true)
     
     - 提交`demo`分支的工作
     
@@ -374,7 +373,7 @@ tags:
     
       - 这是提交的`master`的bug
     
-      ![](.\gitpic\git_fixbug.png)
+      ![](https://github.com/Tammy-zting/Tammy-zting.github.io/tree/master/img/gitpic/git_fixbug.png?raw=true)
     
       - 复制master的bug
     
@@ -382,7 +381,7 @@ tags:
           git cherry-pick <commit>
           ```
 
-          ![](.\gitpic\git_cherry_pick.png)
+          ![](https://github.com/Tammy-zting/Tammy-zting.github.io/tree/master/img/gitpic/git_cherry_pick.png?raw=true)
     
 ### git branch -D <name> 强行删除一个还没有合并的分支
 ### 多人协作
