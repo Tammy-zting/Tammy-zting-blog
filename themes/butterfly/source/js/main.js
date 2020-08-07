@@ -422,7 +422,7 @@ $(function () {
   } else if (isMediumZoom) {
     const zoom = mediumZoom(document.querySelectorAll('#article-container :not(a)>img'))
     zoom.on('open', function (event) {
-      var photoBg = $(document.documentElement).attr('data-theme') === 'dark' ? '#121212' : '#fff'
+      var photoBg = $(document.documentElement).attr('data-theme') === 'dark' ? '#2c2c2c' : '#fff'
       zoom.update({
         background: photoBg
       })

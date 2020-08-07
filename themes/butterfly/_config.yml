@@ -9,13 +9,13 @@
 menu:
   Home: / || fas fa-home
   Archives: /archives/ || fas fa-archive
-  Tags: /tags/ || fas fa-tags
-  Categories: /categories/ || fas fa-folder-open
-  List||fas fa-list:
-    - Music || /music/ || fas fa-music
-    - Movie || /movies/ || fas fa-video
-  Link: /link/ || fas fa-link
-  About: /about/ || fas fa-heart
+  # Tags: /tags/ || fas fa-tags
+  # Categories: /categories/ || fas fa-folder-open
+  # List||fas fa-list:
+  #   - Music || /music/ || fas fa-music
+  #   - Movie || /movies/ || fas fa-video
+  # Link: /link/ || fas fa-link
+  # About: /about/ || fas fa-heart
 
 # Code Blocks (代碼相關)
 # --------------------------------------
@@ -36,8 +36,8 @@ copy:
 # formal:
 #   icon: link || the description
 social:
-  fab fa-github: https://github.com/xxxxx || Github
-  fas fa-envelope: mailto:xxxxxx@gmail.com || Email
+  fab fa-github: https://github.com/Tammy-zting || Github
+  fas fa-envelope: mailto:13750062349@163.com || Email
 
 # search (搜索)
 # --------------------------------------
@@ -86,7 +86,7 @@ favicon: /img/favicon.png
 
 # Avatar (頭像)
 avatar:
-  img: /img/avatar.png
+  img: /img/author_img.jpg
   effect: false
 
 # the banner image of home page
@@ -94,6 +94,7 @@ index_img:
 
 # if the banner of page not setting,it will show the top_img
 # https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1595931897008&di=d3118b2dde6f35d6a611ae0434f81c60&imgtype=0&src=http%3A%2F%2Fimgs.aixifan.com%2Fo_1c8uc9u9l15ll1pprrfg1rme2es31.jpg
+# /img/top_image.jpg
 default_top_img: /img/top_image.jpg
 
 # the banner image of archive page
@@ -173,7 +174,7 @@ toc:
 
 post_copyright:
   enable: true
-  decode: false
+  decode: true  #URL解码
   license: CC BY-NC-SA 4.0
   license_url: https://creativecommons.org/licenses/by-nc-sa/4.0/
 
@@ -689,7 +690,7 @@ snackbar:
   enable: false
   position: bottom-left
   bg_light: '#49b1f5' # The background color of Toast Notification in light mode
-  bg_dark: '#121212' # The background color of Toast Notification in dark mode
+  bg_dark: '#2c2c2c' # The background color of Toast Notification in dark mode
 
 # Baidu Push (百度推送)
 baidu_push: false
